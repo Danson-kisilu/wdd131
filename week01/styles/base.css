@@ -93,12 +93,14 @@ main {
   text-decoration: none;
   font-weight: 500;
 }
-.resources{
+
+.resources {
   background: #fff;
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .resources a:hover {
   color: #e76f51;
   text-decoration: underline;
