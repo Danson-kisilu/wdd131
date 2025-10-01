@@ -5,16 +5,29 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background: #fff;
-  color: #333;
+
+:root {
+  --primary-color: #4f8164;
+  --secondary-color: #056839;
+  --accent-color: #b30000;
+  --overlay-color: rgba(13, 105, 241, 0.85);
+  --text-color: #333;
+  --bg-light: rgba(255, 255, 255, 0.95);
+  --radius: 10px;
+  --font-body: 'Roboto', sans-serif;
+  --font-heading: 'Merriweather', serif;
 }
 
 
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background: #fff;
+  color: var(--text-color);
+}
+
 header {
-  background: #4f8164;
+  background: var(--primary-color);
   color: #fff;
   padding: 1rem;
   display: flex;
@@ -24,7 +37,6 @@ header {
 
 header #course-title {
   font-weight: bold;
-
 }
 
 nav a {
@@ -42,7 +54,7 @@ nav a:hover {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; 
+  height: 100vh; /* full screen */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,82 +65,90 @@ nav a:hover {
 .hero picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 
 .place-title {
   position: absolute;
-  top: 0%;
+  top: 1%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(13, 105, 241, 0.85);
+  background: var(--overlay-color);
   color: #fff;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   font-size: 2rem;
-  font-family: 'Merriweather', serif;
+  font-family: var(--font-heading);
 }
 
 
 .data-box,
 .weather-box {
   position: absolute;
-  
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-light);
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: var(--radius);
   max-width: 250px;
   font-size: 0.9rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .data-box {
-  left: 1%;
-  bottom: 50%;
+  left: 0.5%;
+  bottom: 45%;
 }
 
 .weather-box {
-  right: 0%;
+  right: 1%;
   bottom: 0%;
 }
 
 .data-box h2,
 .weather-box h2 {
-  background: #056839;
-  color: #ffffff;
+  background: var(--secondary-color);
+  color: #fff;
   padding: 0.4rem;
-  margin-bottom: 0rem;
+  margin-bottom: 2rem;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.weather-box h2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.weather-box h2::after {
+  content: "⛅";
+  margin-left: 0.5rem;
 }
+
 
 .weather-box img.weather-icon {
   max-width: 35px;
   height: auto;
+  display: none;
 }
 
+.mobile-only {
+  display: none;
+}
 
+/* ---------CONTENT---------- */
 .content {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 0.5rem;
 }
 
 .content h2 {
-  color: #b30000;
-  margin-bottom: 0.5rem;
-  padding-left:20rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  margin-left: 220px;
 }
 
-
+/* --------- FOOTER--------------- */
 footer {
-  background: #4f8164;
+  background: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -149,18 +169,26 @@ footer a {
 
   .data-box,
   .weather-box {
-    position: static; 
+    position: static;
     margin: 1rem auto;
     max-width: 90%;
   }
 
   .hero {
-    height: auto; 
+    height: auto;
     flex-direction: column;
   }
 
   .hero picture,
   .hero picture img {
     height: auto;
+  }
+
+  
+  .weather-box h2::after {
+    content: "";
+  }
+  .weather-box img.weather-icon {
+    display: inline;
   }
 }
