@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Place page — Diani, Kenya. WDD 131 assignment: hero image, data, weather, and wind chill example." />
+  <meta name="author" content="Danson Kisilu" />
+  <title>Diani, Kenya | WDD 131 — Danson Kisilu</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/place.css" />
+
+  <!-- JavaScript -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="temples.html">Temples</a>
+      <a href="place.html" aria-current="page">Place</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/diani-large.webp" media="(min-width: 768px)" />
+        <img src="images/diani-small.webp" alt="Diani Beach, Kenya" />
+      </picture>
+
+      <!-- Title Overlay -->
+      <h1 class="place-title">Diani, Kenya</h1>
+
+      <!-- Data Box -->
+      <aside class="data-box">
+        <h2>Data</h2>
+        <dl>
+          <dt><strong>Area:</strong></dt><dd>~70 km²</dd>
+          <dt><strong>Population:</strong></dt><dd>~100,000 (approx.)</dd>
+          <dt><strong>County:</strong></dt><dd>Kwale County</dd>
+          <dt><strong>Languages:</strong></dt><dd>Swahili, English</dd>
+          <dt><strong>Currency:</strong>/dt><dd>Kenyan Shilling (KES)</dd>
+          <dt><strong>Time Zone:</strong></dt><dd>UTC+3 (EAT)</dd>
+          <dt><strong>Calling Code:</strong></dt><dd>+254</dd>
+          <dt><strong>Internet TLD:</strong></dt><dd>.ke</dd>
+        </dl>
+      </aside>
+
+      <!-- Weather Box -->
+      <aside class="weather-box">
+        <h2>
+          Weather
+          <!-- SVG for mobile -->
+          <img class="weather-icon mobile-only" src="images/weather.svg" alt="Weather icon" />
+        </h2>
+        <ul>
+          <li>Temperature: <span id="temp">28</span> °C</li>
+          <li>Conditions: <span id="conditions">Sunny</span></li>
+          <li>Wind: <span id="wind">15</span> km/h</li>
+          <li>Wind Chill: <span id="windchill">N/A</span></li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Info Section -->
+    <section class="content">
+      <h2>About Diani</h2>
+      <p>Diani Beach is a popular coastal resort on the Indian Ocean in southern Kenya. It features white-sand beaches, coral reefs, and a vibrant tourism scene centered on water activities and relaxation.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> • Danson Kisilu • Kenya</p>
+    <p id="lastModified"></p>
+    <p><a href="images/place-wireframe.png">View Place Page Wireframe</a></p>
+  </footer>
+</body>
+</html>
