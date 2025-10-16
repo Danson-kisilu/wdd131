@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Farm product review form for WDD 131 assignment by Danson Kisilu" />
+    <meta name="author" content="Danson Kisilu" />
+    <title>Product Review | WDD 131 – Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <header>
+        <h1><strong>WDD 131 – Dynamic Web Fundamentals</strong></h1>
+        <p>Farm Product Review</p>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Information</legend>
+
+                <label for="productName">Select a Product:</label>
+                <select id="productName" name="productName" required>
+                    <option value="">Choose a product...</option>
+                </select>
+
+                <label for="rating">Overall Rating:</label>
+                <div class="stars">
+                    <label><input type="radio" name="rating" value="1" required> 1 ★</label>
+                    <label><input type="radio" name="rating" value="2"> 2 ★</label>
+                    <label><input type="radio" name="rating" value="3"> 3 ★</label>
+                    <label><input type="radio" name="rating" value="4"> 4 ★</label>
+                    <label><input type="radio" name="rating" value="5"> 5 ★</label>
+                </div>
+
+                <label for="installationDate">Date of Installation/Purchase:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Product Features</legend>
+                <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                <label><input type="checkbox" name="features" value="eco"> Eco-Friendly</label>
+                <label><input type="checkbox" name="features" value="easy"> Easy to Use</label>
+                <label><input type="checkbox" name="features" value="value"> Good Value</label>
+                <label><input type="checkbox" name="features" value="performance"> High Performance</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Feedback</legend>
+                <label for="writtenReview">Your Review:</label>
+                <textarea id="writtenReview" name="writtenReview" rows="5"
+                    placeholder="Write your feedback here..."></textarea>
+
+                <label for="userName">Your Name (optional):</label>
+                <input type="text" id="userName" name="userName">
+            </fieldset>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> | Danson Kisilu | WDD 131 Project</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/form.js" defer></script>
+</body>
+
+</html>
