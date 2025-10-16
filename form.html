@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Farm product review form for WDD 131 assignment by Danson Kisilu" />
+    <meta name="description" content="Farm product review form for WDD 131 assignment by Danson Kisilu." />
     <meta name="author" content="Danson Kisilu" />
     <title>Product Review | WDD 131 – Dynamic Web Fundamentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css" />
 </head>
 
 <body>
     <header>
-        <h1><strong>WDD 131 – Dynamic Web Fundamentals</strong></h1>
+        <h1>WDD 131 – Dynamic Web Fundamentals</h1>
         <p>Farm Product Review</p>
     </header>
 
     <main>
         <form method="get" action="review.html">
+            <!-- Product Info -->
             <fieldset>
                 <legend>Product Information</legend>
 
                 <label for="productName">Select a Product:</label>
                 <select id="productName" name="productName" required>
                     <option value="">Choose a product...</option>
+                    
                 </select>
 
-                <label for="rating">Overall Rating:</label>
+                <label>Overall Rating:</label>
                 <div class="stars">
                     <label><input type="radio" name="rating" value="1" required> 1 ★</label>
                     <label><input type="radio" name="rating" value="2"> 2 ★</label>
@@ -39,6 +45,7 @@
                 <input type="date" id="installationDate" name="installationDate" required>
             </fieldset>
 
+            <!-- Features -->
             <fieldset>
                 <legend>Product Features</legend>
                 <label><input type="checkbox" name="features" value="durability"> Durability</label>
@@ -48,8 +55,10 @@
                 <label><input type="checkbox" name="features" value="performance"> High Performance</label>
             </fieldset>
 
+            <!-- Feedback -->
             <fieldset>
                 <legend>Additional Feedback</legend>
+
                 <label for="writtenReview">Your Review:</label>
                 <textarea id="writtenReview" name="writtenReview" rows="5"
                     placeholder="Write your feedback here..."></textarea>
@@ -58,7 +67,7 @@
                 <input type="text" id="userName" name="userName">
             </fieldset>
 
-            <button type="submit">Submit Review</button>
+            <input type="submit" value="Submit Review">
         </form>
     </main>
 
