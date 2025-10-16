@@ -1,0 +1,85 @@
+:root {
+  --green: #055a05;
+  --yellow: #f4a261;
+  --dark: #264653;
+  --font: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  margin: 0;
+  color: var(--dark);
+}
+
+header {
+  background: var(--green);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 2px solid var(--yellow);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.hero h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+main {
+  padding: 1rem;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea, button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: var(--green);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--dark);
+}
+
+footer {
+  margin-top: 1rem;
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
